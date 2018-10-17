@@ -1,57 +1,19 @@
 # itp404-final-project
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This README outlines the details of the final project
 
-## Prerequisites
+## What Problem Are You Trying to Solve?
 
-You will need the following things properly installed on your computer.
+Mosaic Student Communities. StuHo Housing. Olga. What do all of these have in common? Poor management services and people trying to screw over clueless college kids. Yelp works...to an extent, but in the search for student housing, what if there are more resources? This project will compile Yelp reviews and Google reviews to return information on the various leasing agencies and realtors (if there are any) around the USC area. Students so often settle for whatever is around the USC area that they receive poor management from greedy companies when they could've found somewhere else. This project facilitates the housing search process and even provides landlord tenant lawyer resources. Think Rate My Professor meets housing!
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+## Who is Your Primary Audience?
 
-## Installation
+My primary audience are USC students looking for housing, but who are relatively new to this process.
 
-* `git clone <repository-url>` this repository
-* `cd itp404-final-project`
-* `npm install`
+## How will the project requirements be fulfilled?
 
-## Running / Development
+Users will be able to add, delete, and edit reviews, which will satisfy the GET, POST, PUT, and DELETE requirements. To be honest...I don't really know what the other requirements mean, but I will make sure to include all of them for this final project.
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+## Which addon(s) do you think you will use and for what? Explore Ember addons at Ember Observer.
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- I will be using the ember-leaflet, ember-burger-menu, and ember-moment add-ons.
