@@ -1,0 +1,15 @@
+<div class="container">
+  <form onsubmit={{action "composeReview"}}>
+    <h3>Write a Review</h3>
+      <div>
+        <p>{{textarea rows="20" cols="100" id="review" value=review}}</p>
+      </div>
+      {{star-rating 2.5}}
+
+    <div>
+      <button type="submit">
+        <h5 style="margin: 0;">Publish</h5>
+      </button>
+    </div>
+  </form>
+</div>

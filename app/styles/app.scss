@@ -1,0 +1,95 @@
+@import "ember-bootstrap/bootstrap";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #a6dff2;
+}
+
+ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  float: right;
+  margin: 0 5%;
+  font-weight: lighter;
+}
+
+.ember-cli-g-map {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0;
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: center;
+  clear: both;
+}
+
+.resource-blocks {
+  width: 30%;
+  padding: 2%;
+  margin: 2%;
+  background-color: #0e4e90;
+  text-align: center;
+}
+
+#display {
+  text-align: center;
+  font-size: 5em;
+  color: #0e4e90;
+}
+
+.icons {
+  width: 20%;
+  margin-bottom: 15%;
+}
+
+.map-container {
+  width: 50%;
+  text-align: center;
+  display: block;
+  float: right;
+  position: relative;
+  margin: 5%;
+}
+
+.companies {
+  width: 20%;
+  height: 30%;
+  flex-basis: 20%;
+  flex-shrink: 2;
+  margin: 2%;
+  float: left;
+  padding: 2%;
+  background-color: #f5f7fa;
+  border-top: 10px solid #ffec54;
+  word-wrap: break-word;
+  li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.company-block {
+  float: left;
+  width: 40%;
+  margin: 5%;
+}
+.review-block {
+  float: right;
+  width: 60%;
+  margin: 5%;
+}

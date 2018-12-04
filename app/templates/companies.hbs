@@ -1,0 +1,10 @@
+<div class="container">
+  <ul>
+    {{#each model as |company|}}
+    <div class="companies">
+      <SingleCompany @company={{company}} />
+    </div>
+    {{/each}}
+  </ul>
+
+</div>
