@@ -11,7 +11,7 @@ Router.map(function() {
   this.route("companies");
   this.route("saved");
   this.route("rights");
-  this.route("lawyer"), { path: "/lawyers/:id" };
+  this.route("lawyer"), { path: "/:id" };
   this.route("utilities");
   this.route("company", { path: "/companies/:id" });
   this.route("review", { path: "/reviews/:id" });

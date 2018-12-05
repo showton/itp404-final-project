@@ -15,6 +15,8 @@ export default function() {
 
   this.get("/companies");
   this.get("/reviews");
+  this.get("/reviews/:id");
+  // this.post("/reviews");
   this.post("/reviews/:id");
   this.del("/reviews");
   this.post("/companies");
