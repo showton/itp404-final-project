@@ -5,6 +5,19 @@
     <p>{{model.phone}}</p>
     <a href="{{model.website}}">Website</a>
     <p>{{model.address}}</p>
+
+
+  {{#each model.reviews as |review|}}
+  <div class="review">
+    <button type="button" onclick={{action "deleteReview" model}}>
+              <h5>Delete</h5>
+          </button>
+    <h4>{{model.name}} is... <span>{{star-rating}}</span></h4>
+    {{review.review}}
+  </div>
+  {{/each}}
+
+
   </div>
 
   <div class="review-block">
@@ -14,10 +27,11 @@
 
       <form onsubmit={{action "composeReview"}}>
         <h3>Write a Review</h3>
-          <div>
+          <div class="review-form">
+            <h3>Select a rating:<span style="margin-left: 5%;">{{star-rating}}</span></h3>
+            <br>
             <p>{{textarea rows="10" cols="80" id="review" value=review}}</p>
           </div>
-          {{star-rating 2.5}}
 
         <div>
           <button type="submit">

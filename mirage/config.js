@@ -14,10 +14,12 @@ export default function() {
   //Shorthand cheatsheet:
 
   this.get("/companies");
-  this.get("/api/reviews");
-  this.post("/api/reviews");
+  this.get("/reviews");
+  this.post("/reviews/:id");
+  this.del("/reviews");
   this.post("/companies");
   this.get("/companies/:id");
   this.patch("/companies/:id"); // or this.patch
-  this.del("/companies/:id");
+  // this.del("/companies/:id");
+  this.get("/lawyers/:id");
 }

@@ -7,7 +7,6 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route("create");
   this.route("resources");
   this.route("companies");
   this.route("saved");
@@ -15,8 +14,8 @@ Router.map(function() {
   this.route("lawyer"), { path: "/lawyers/:id" };
   this.route("utilities");
   this.route("company", { path: "/companies/:id" });
-  this.route("review");
-  this.route('lawyers');
+  this.route("review", { path: "/reviews/:id" });
+  this.route("lawyers");
 });
 
 export default Router;

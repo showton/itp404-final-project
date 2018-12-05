@@ -1,10 +1,15 @@
   {{#link-to "company" company.id}}
-<div>
+  <div class="image-block">
+    <img id="resize" src="{{company.image}}">
+    <div class="overlay">
+    <div class="text"><h3 style="color: #000">Read the review</h3></div>
+  </div>
+  </div>
+  {{/link-to}}
+  <div class="text-block">
   <h4>{{company.name}}</h4>
   <h5>{{company.yelp}}</h5>
   <p>{{company.phone}}</p>
   <a href="{{model.website}}">Website</a>
   <p>{{company.address}}</p>
 </div>
-
-  {{/link-to}}

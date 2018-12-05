@@ -5,5 +5,7 @@ export default DS.Model.extend({
   yelp: DS.attr("number"),
   phone: DS.attr("string"),
   website: DS.attr("string"),
-  address: DS.attr("string")
+  address: DS.attr("string"),
+  reviews: DS.hasMany("review"),
+  image: DS.attr("string")
 });
