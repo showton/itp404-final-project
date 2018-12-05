@@ -24,10 +24,6 @@ export default Controller.extend({
 
       if (confirmed) {
         console.log("destroy record test");
-        let review = this.store.findRecord("review", {
-          review: this.review,
-          company: this.model
-        });
         review.destroyRecord().then(() => {
           console.log("test");
           this.transitionToRoute("company");

@@ -15,11 +15,12 @@ export default function() {
 
   this.get("/companies");
   this.get("/reviews");
-  this.get("/reviews/:id");
-  // this.post("/reviews");
-  this.post("/reviews/:id");
-  this.del("/reviews");
-  this.post("/companies");
+  // this.get("/reviews/:id");
+  this.post("/reviews");
+  // this.post("/reviews/:id");
+  this.del("/reviews/:id");
+  this.del("/companies/:id");
+  // this.post("/companies");
   this.get("/companies/:id");
   this.patch("/companies/:id"); // or this.patch
   // this.del("/companies/:id");

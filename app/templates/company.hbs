@@ -9,7 +9,7 @@
 
   {{#each model.reviews as |review|}}
   <div class="review">
-    <button type="button" onclick={{action "deleteReview" model}}>
+    <button type="button" onclick={{action "deleteReview" review}}>
               <h5>Delete</h5>
           </button>
     <h4>{{model.name}} is... <span>{{star-rating}}</span></h4>
