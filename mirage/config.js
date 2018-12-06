@@ -22,7 +22,8 @@ export default function() {
   this.del("/companies/:id");
   // this.post("/companies");
   this.get("/companies/:id");
-  this.patch("/companies/:id"); // or this.patch
+  // this.patch("/companies/:id"); // or this.patch
+  this.patch("/reviews/:id");
   // this.del("/companies/:id");
   this.get("/lawyers/:id");
 }

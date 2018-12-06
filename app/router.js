@@ -17,6 +17,7 @@ Router.map(function() {
   this.route("review", { path: "/reviews/:id" });
   this.route("reviews", { path: "/reviews/:id" });
   this.route("lawyers");
+  this.route("loading");
 });
 
 export default Router;

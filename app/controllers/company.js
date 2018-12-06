@@ -13,7 +13,7 @@ export default Controller.extend({
         company: this.model
       });
       //save post and redirect back to index
-      review.save().then(() => {
+      review.save("Saving...").then(() => {
         this.transitionToRoute("company");
       });
     },
@@ -27,14 +27,17 @@ export default Controller.extend({
         review.destroyRecord().then(() => {
           console.log("test");
           this.transitionToRoute("company");
-          console.log("test again");
+          console.log("record destroyed");
         });
       }
     },
     editReview(review, event) {
       event.preventDefault();
+      review.get("updatedTitle");
+      review.set("updatedTitle", review.updatedTitle);
       //save the post
       // let post = this.model;
+      console.log(this.updatedTitle);
       review.save().then(() => {
         this.transitionToRoute("company");
       });
