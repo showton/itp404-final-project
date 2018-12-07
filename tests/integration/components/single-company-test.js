@@ -1,26 +1,27 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
+import { render } from "@ember/test-helpers";
+import hbs from "htmlbars-inline-precompile";
 
-module('Integration | Component | single-company', function(hooks) {
+module("Integration | Component | single-company", function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
-    await render(hbs`{{single-company}}`);
-
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#single-company}}
-        template block text
-      {{/single-company}}
+  test("it renders", function(assert) {
+    // server.create("company", {
+    //   name: "Company Name",
+    //   // rating: 1.5,
+    //   phone: "123-456-7890",
+    //   website: "Website",
+    //   address: "123 Example Drive"
+    // });
+    this.render(hbs`
+      <SingleCompany @company={{company}} />
     `);
+    this.set("company", "Company Name");
+    // Template block usage:
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.$("#companyName").text(), "Company Name");
+
+    // assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

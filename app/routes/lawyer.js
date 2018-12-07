@@ -5,5 +5,5 @@ export default Route.extend({
     console.log(params.id);
     return this.store.findRecord("lawyer", params.id, { include: "all" });
   },
-  titleToken: "Lawyers"
+  title: "Lawyers"
 });

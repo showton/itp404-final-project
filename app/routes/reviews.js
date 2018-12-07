@@ -4,5 +4,5 @@ export default Route.extend({
   model() {
     return this.store.findAll("review");
   },
-  titleToken: "Reviews Page"
+  title: "Reviews Page"
 });

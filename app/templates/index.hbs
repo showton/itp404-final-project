@@ -1,4 +1,15 @@
-<div class="map-container">
+<!-- <div class="map-container">
   {{g-maps name="my-map" lat=lat lng=lng zoom=zoom}}
 </div>
-{{outlet}}
+{{outlet}} -->
+<div>
+  <div class="displayText">
+    <h1 style="letter-spacing: 50px;">HOUSE ME</h1>
+    <h6>An <span style="color: #ffec54;">all-in-one</span> student resource for the leasing companies around the USC area.</h6>
+  </div>
+  {{#link-to 'companies'}}
+    <div class="transition-button">
+      <h5>Get started!</h5>
+    </div>
+  {{/link-to}}
+</div>

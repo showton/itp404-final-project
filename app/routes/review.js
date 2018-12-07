@@ -4,5 +4,5 @@ export default Route.extend({
   model(params) {
     return this.store.findRecord("review", params.id);
   },
-  titleToken: "Reviews"
+  title: "Reviews"
 });

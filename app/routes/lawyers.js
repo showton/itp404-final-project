@@ -4,5 +4,5 @@ export default Route.extend({
   model() {
     return this.store.findAll("lawyer");
   },
-  titleToken: "Lawyers Page"
+  title: "Lawyers Page"
 });

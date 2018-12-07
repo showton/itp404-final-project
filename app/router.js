@@ -9,7 +9,6 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route("resources");
   this.route("companies");
-  this.route("saved");
   this.route("rights");
   this.route("lawyer"), { path: "/:id" };
   this.route("utilities");

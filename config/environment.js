@@ -23,6 +23,11 @@ module.exports = function(environment) {
     }
   };
 
+  ENV["ember-cli-mirage"] = {
+    enabled: true,
+    autostart: true
+  };
+
   ENV.googleMap = {
     apiKey: "AIzaSyCch1BVuD92RtP2ksPoQk4ulw2ewPZdJKs",
     libraries: ["drawing", "visualization"],

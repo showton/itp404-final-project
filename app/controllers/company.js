@@ -7,6 +7,13 @@ export default Controller.extend({
       review.set("rating", rating);
       return review.save();
     },
+    saveReview() {
+      return new RSVP.Promise(resolve => {
+        later(() => {
+          resolve();
+        }, 2000);
+      });
+    },
     composeReview(event) {
       event.preventDefault();
       let review = this.store.createRecord("review", {

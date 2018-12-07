@@ -1,26 +1,30 @@
 <div class="container">
   <div class="company-block">
-    <h2>{{model.name}}</h2>
-    <h4>{{model.yelp}}</h4>
-    <p>{{model.phone}}</p>
+    <h2 data-test="companyName">{{model.name}}</h2>
+    <h4 data-test="companyRating">{{model.yelp}}</h4>
+    <p data-test="companyPhone">{{model.phone}}</p>
     <a href="{{model.website}}" target="_blank">
-      <p>Website</p>
+      <p data-test="companyWebsite">Website</p>
     </a>
-    <p>{{model.address}}</p>
+    <p data-test="companyAddress">{{model.address}}</p>
 
 
     {{#each model.reviews as |review|}}
-      <div class="review">
+      <div class="review" data-test="each-review">
         <div class="reviewResult">
           <h4>{{model.name}} is... <span>{{star-rating}}</span></h4>
           {{#if isTooLong}}
             <p>
               {{review.review}}
             </p>
-            <button {{action "toggleBody"}} id="readMore"><h5>Read Less</h5></button>
+            <button {{action "toggleBody"}} id="readMore">
+              <h5>Read Less</h5>
+            </button>
           {{else}}
-            {{truncate-text review.review 300}}
-            <button {{action "toggleBody"}} id="readMore"><h5>Read More</h5></button>
+            {{truncate-text review.review 300 data-test="characters"}}
+            <button {{action "toggleBody"}} id="readMore">
+              <h5>Read More</h5>
+            </button>
           {{/if}}
 
         </div>
@@ -43,21 +47,25 @@
   </div>
 
   <div class="review-block">
-    <!-- {{#link-to 'create'}}
-      <h4>Write a review</h4>
-    {{/link-to}} -->
 
     <form onsubmit={{action "composeReview"}}>
       <h3>Write a Review</h3>
       <div class="review-form">
         <h3>Select a rating:<span style="margin-left: 5%;">{{star-rating item=review rating=review.rating on-click=(action "updateRating")}}</span></h3>
         <br>
-        <p>{{textarea rows="10" cols="80" id="review" value=review placeholder="Write a review here..."}}</p>
-        <div>{{validationErrors.review}}</div>
+        <p>
+          {{textarea rows="10"
+          cols="80"
+          id="review"
+          value=review
+          placeholder="Write a review here..."
+          data-test="review-body"}}
+        </p>
       </div>
 
       <div>
-        <button type="submit" id="publish"><h5>Publish</h5></button>
+        <AsyncButton @defaultText="Save" @pendingText="Saving..." @onClick={{action "saveReview"}} id="publish" data-test="publish" />
+        <!-- <button type="submit" id="publish" data-test="publish"><h5>Publish</h5></button> -->
       </div>
     </form>
   </div>

@@ -5,5 +5,5 @@ export default Route.extend({
     console.log(error.message);
     this._super(...arguments);
   },
-  titleToken: "Error Page"
+  title: "Error Page"
 });

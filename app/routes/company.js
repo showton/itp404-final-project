@@ -10,5 +10,7 @@ export default Route.extend({
     //set controller title and body to empty string on refresh
     controller.set("review", " ");
   },
-  titleToken: "Companies"
+  titleToken: function(model) {
+    return model.get("name");
+  }
 });
