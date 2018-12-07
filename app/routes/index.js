@@ -25,5 +25,6 @@ export default Route.extend({
         console.log("Map tiles have finished loading");
       });
     }
-  }
+  },
+  titleToken: "Home Page"
 });

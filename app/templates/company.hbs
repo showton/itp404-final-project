@@ -3,7 +3,7 @@
     <h2>{{model.name}}</h2>
     <h4>{{model.yelp}}</h4>
     <p>{{model.phone}}</p>
-    <a href="{{model.website}}">
+    <a href="{{model.website}}" target="_blank">
       <p>Website</p>
     </a>
     <p>{{model.address}}</p>
@@ -11,21 +11,30 @@
 
     {{#each model.reviews as |review|}}
       <div class="review">
-        <div>
+        <div class="reviewResult">
           <h4>{{model.name}} is... <span>{{star-rating}}</span></h4>
-          {{review.review}}
+          {{#if isTooLong}}
+            <p>
+              {{review.review}}
+            </p>
+            <button {{action "toggleBody"}} id="readMore"><h5>Read Less</h5></button>
+          {{else}}
+            {{truncate-text review.review 300}}
+            <button {{action "toggleBody"}} id="readMore"><h5>Read More</h5></button>
+          {{/if}}
+
         </div>
-        <div>
-          <button type="button" onclick={{action "deleteReview" review}}>
-            <h5>Delete</h5>
-          </button>
-          <div>
-            <h5>Edit Review</h5>
-            {{input value=updatedTitle placeholder="new name for board game 1"}}
-            <button type="button" onclick={{action "editReview" review}}>
-              <h5>Save</h5>
+        <div class="editReview">
+          <h4>Edit Review</h4>
+          {{textarea rows="5" cols="40" value=updatedTitle placeholder="Edit your review here..."}}
+          <div class="buttons">
+            <button type="button" onclick={{action "editReview" review}} id="save">
+              <h5>Save Edit</h5>
             </button>
-        </div>
+            <button type="button" onclick={{action "deleteReview" review}} id="delete">
+              <h5>Delete Review</h5>
+            </button>
+          </div>
         </div>
       </div>
     {{/each}}
@@ -41,16 +50,14 @@
     <form onsubmit={{action "composeReview"}}>
       <h3>Write a Review</h3>
       <div class="review-form">
-        <h3>Select a rating:<span style="margin-left: 5%;">{{star-rating}}</span></h3>
+        <h3>Select a rating:<span style="margin-left: 5%;">{{star-rating item=review rating=review.rating on-click=(action "updateRating")}}</span></h3>
         <br>
         <p>{{textarea rows="10" cols="80" id="review" value=review placeholder="Write a review here..."}}</p>
         <div>{{validationErrors.review}}</div>
       </div>
 
       <div>
-        <button type="submit">
-          <h5 style="margin: 0;">Publish</h5>
-        </button>
+        <button type="submit" id="publish"><h5>Publish</h5></button>
       </div>
     </form>
   </div>

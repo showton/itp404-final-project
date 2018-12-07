@@ -18,6 +18,7 @@ Router.map(function() {
   this.route("reviews", { path: "/reviews/:id" });
   this.route("lawyers");
   this.route("loading");
+  this.route("error");
 });
 
 export default Router;

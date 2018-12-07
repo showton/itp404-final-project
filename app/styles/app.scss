@@ -161,3 +161,76 @@ li {
   top: 50%;
   left: 50%;
 }
+
+.review {
+  h5 {
+    margin-bottom: 0;
+  }
+}
+
+.buttons {
+  display: inline-block;
+  width: 100%;
+  margin-top: 5%;
+  button {
+    border: none;
+    padding: 2%;
+  }
+  h5 {
+    color: #fff;
+  }
+  #delete {
+    float: left;
+    background-color: #ed5565;
+  }
+  #delete:hover {
+    background-color: #fff;
+    h5 {
+      color: #ed5565;
+    }
+  }
+  #save {
+    float: right;
+    background-color: #48cfad;
+  }
+  #save:hover {
+    background-color: #fff;
+    h5 {
+      color: #48cfad;
+    }
+  }
+}
+
+.editReview {
+  margin-top: 20%;
+}
+
+#publish {
+  background-color: #a6dff2;
+  padding: 2%;
+  border: none;
+  h5 {
+    margin: 0;
+    color: #fff;
+  }
+}
+
+#publish:hover {
+  background-color: #48cfad;
+  h5 {
+    color: #fff;
+  }
+}
+
+.reviewResult {
+  #readMore {
+    float: right;
+    background-color: #48cfad;
+    margin: 5% 0;
+    padding: 2%;
+    border: none;
+  }
+  h5 {
+    color: #fff;
+  }
+}
