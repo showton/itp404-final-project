@@ -28,18 +28,24 @@ module("Acceptance | reviews", function(hooks) {
     assert.dom('[data-test="companyAddress"]').hasText("123 Example Drive");
   });
 
+  test("testing delete email", async function(assert) {
+    server.create("review");
+    window.confirm = () => true;
+    await visit("/companies");
+    assert.dom('[data-test="each-review"]').exists({
+      count: 0
+    });
+  });
+
   test("testing compose email", async function(assert) {
-    await visit("/companies/:id");
-    await fillIn(":id", "1");
-    // assert.dom('[data-test="each-review"]').exists({
-    //   count: 0
-    // });
-    // await fillIn("#review", "This is a test review");
-    // await click('[data-test="publish"]');
-    //
-    assert.equal(currentURL(), "/companies/1");
-    // assert.dom('[data-test="each-review"]').exists({
-    //   count: 1
-    // });
+    await visit("/companies/1");
+    assert.dom('[data-test="each-review"]').exists({
+      count: 0
+    });
+    await fillIn("#review", "jesus@gmail.com");
+    await click('[data-test="publish"]');
+    assert.dom('[data-test="each-review"]').exists({
+      count: 1
+    });
   });
 });
