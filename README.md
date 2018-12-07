@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/showton/itp404-final-project.svg?branch=master)](https://travis-ci.org/showton/itp404-final-project)
+
 # itp404-final-project
 
 This README outlines the details of the final project
