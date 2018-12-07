@@ -22,11 +22,13 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
-  ENV["ember-cli-mirage"] = {
-    enabled: true,
-    autostart: true
-  };
+  if (environment === "production") {
+    // here you can enable a production-specific feature
+    ENV["ember-cli-mirage"] = {
+      enabled: true,
+      autostart: true
+    };
+  }
 
   ENV.googleMap = {
     apiKey: "AIzaSyCch1BVuD92RtP2ksPoQk4ulw2ewPZdJKs",
